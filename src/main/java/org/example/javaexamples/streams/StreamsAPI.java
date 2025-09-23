@@ -1,7 +1,6 @@
-package org.example.javaexamples;
+package org.example.javaexamples.streams;
 
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
