@@ -1,12 +1,10 @@
 package org.example.javaexamples.lld.tictactoe;
 
 import org.example.javaexamples.lld.tictactoe.algo.CheckWinner;
-import org.example.javaexamples.lld.tictactoe.entities.Matrix;
 import org.example.javaexamples.lld.tictactoe.entities.Player;
 import org.example.javaexamples.lld.tictactoe.entities.ShapeEnum;
 
 import java.awt.*;
-import java.util.List;
 
 public class PlayerManager {
 
@@ -24,10 +22,6 @@ public class PlayerManager {
         return new Player(name,shapeEnum);
     }
 
-//    public void setMatrixData(Player player){
-//        List<Matrix> playerChance = player.getChances();
-//        playerChance.add(player.getMatrix());
-//    }
 
     public void checkWinner(Player[][] playerBoard,Player player){
         CheckWinner checkWinner = new CheckWinner();
