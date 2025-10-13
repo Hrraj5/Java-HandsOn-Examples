@@ -45,8 +45,8 @@ public class BankingService2 {
                 if(account1.withdraw(100))
                     account2.deposit(100);
             }finally {
-                account1.getLock().unlock();
                 account2.getLock().unlock();
+                account1.getLock().unlock();
             }
         };
 
