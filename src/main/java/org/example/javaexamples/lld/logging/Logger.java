@@ -20,12 +20,16 @@ public class Logger {
         logHandler.handle(logMessage);
     }
 
-    public void warn(String message){
+    public void debug(String message){
+        log(LogLevel.DEBUG,message);
+    }
 
+    public void warn(String message){
+        log(LogLevel.WARN,message);
     }
 
     public void info(String message){
-
+        log(LogLevel.INFO,message);
     }
 
     public void error(String message){

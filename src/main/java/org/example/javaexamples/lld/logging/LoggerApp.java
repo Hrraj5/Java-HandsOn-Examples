@@ -16,8 +16,8 @@ public class LoggerApp {
         LogConfiguration.addLogAppender(new FileAppender(new PlainTextFormatter(), "log_file.txt"), LogLevel.INFO);
         LogConfiguration.addLogAppender(new FileAppender(new PlainTextFormatter(), "log_file.txt"), LogLevel.ERROR);
 
-        logger.log(LogLevel.DEBUG,"Hello How are you");
-        logger.log(LogLevel.INFO,"Hello I m fine");
-        logger.log(LogLevel.ERROR,"404 Error");
+        logger.debug("Hello How are you");
+        logger.info("Hello I m fine");
+        logger.error("404 Error");
     }
 }
