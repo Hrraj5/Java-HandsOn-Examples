@@ -5,6 +5,7 @@ import org.example.javaexamples.lld.tictactoe.entities.Player;
 import org.example.javaexamples.lld.tictactoe.entities.ShapeEnum;
 
 import java.awt.*;
+import java.util.Objects;
 
 public class PlayerManager {
 
@@ -13,10 +14,7 @@ public class PlayerManager {
     private PlayerManager(){}
 
     public static PlayerManager getPlayerManager() {
-        if(playerManagerInstance == null){
-            return new PlayerManager();
-        }
-        return playerManagerInstance;
+        return Objects.requireNonNullElseGet(playerManagerInstance, PlayerManager::new);
     }
     public Player getNewPlayer(String name,ShapeEnum shapeEnum){
         return new Player(name,shapeEnum);

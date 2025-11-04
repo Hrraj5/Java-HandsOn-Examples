@@ -29,11 +29,11 @@ public class DeadlockExample {
         });
 
         Thread t2 = new Thread(()->{
-            synchronized (fork){
+            synchronized (spoon){
                 System.out.println(Thread.currentThread().getName() + " Asking for fork");
                 try{
                     Thread.sleep(3000);
-                    synchronized (spoon){
+                    synchronized (fork){
                         System.out.println(Thread.currentThread().getName() + " Asking for spoon");
                     }
                 }catch(Exception e){
